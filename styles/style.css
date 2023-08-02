@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+.header{
+    display: flex;
+}
 .header__item::after{
     content: '';
     display: block;
@@ -8,7 +16,7 @@
     border-radius: 50%;
     position: absolute;
     top: 50%;
-    right: -40px;
+    right: 0px;
     transform: translate(0, -50%);
 }
 .header__item::before{
@@ -21,9 +29,213 @@
     border-radius: 50%;
     position: absolute;
     top: 50%;
-    left: -40px;
+    left: 0px;
     transform: translate(0, -50%);
 }
-.wrapper{
-    padding: 0;
+.title{
+    font-size: 3rem;
+    line-height: 111.228%;
+}
+.tagline{
+    white-space: nowrap;
+    font-size: 0.875rem;
+    letter-spacing: 0.03125rem;
+    overflow: hidden;
+}
+.bg__bd{
+    background-image: url(../imgs/frame03.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    padding: 20% 0;
+}
+.fire {
+    top: 10px;
+}
+.left__fire{
+    left: 20px;
+}
+.right__fire{
+    right: 20px;
+}
+.fire_big{
+    right: -17px;
+}
+.item__text{
+    font-size: 1.125rem;
+}
+.item__title{
+    font-size: 1.5rem;
+}
+.top{
+    top: 40px;
+}
+.content{
+    top: 50%;
+    left: 50%;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    transform: translate(-50%, -50%);
+}
+.bg_fire{
+    background-image: url(../imgs/bg_fire.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.position{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.burger {
+    display: none;
+    margin-left: 15px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.burger::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    background: #000;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+}
+.burger::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    background: #000;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+}
+.burger__itm {
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    background: #000;
+}
+@media (max-width: 1199px){
+    .content{
+        font-size: 0.5rem;
+    }
+}
+@media (max-width: 991px){
+    body{
+        font-size: 80%;
+    }
+    .header__item::after{
+        width: 10px;
+        height: 10px;
+        right: -10px;
+    }
+    .header__item::before{
+        width: 10px;
+        height: 10px;
+        left: -10px;
+    }
+    .title{
+        font-size: 2.5rem;
+    }
+    .fire{
+        width: 20px;
+        height: 30px;
+    }
+    .fire_big{
+        width: 30px;
+        height: 70px;
+    }
+    .item__text{
+        font-size: 0.875rem;
+    }
+    .item__title{
+        font-size: 1rem;
+    }
+    .frame{
+        display: none;
+    }
+    .content{
+        font-size: 1rem;
+        width: 100%;
+    }
+    .top{
+        top: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .burger {
+      display: block;
+    }
+    .burger__itm{
+        display: block;
+    }
+    .header{
+        display: none;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .fire{
+        top: 0;
+        width: 15px;
+        height: 25px;
+    }
+    .fire_big{
+        top: -10px;
+        right: -10px;
+        width: 20px;
+        height: 60px;
+    }
+    .top{
+        top: 20px;
+    }
+    .item__text{
+        font-size: 0.5rem;
+    }
+    .item__title{
+        font-size: 0.875rem;
+    }
+    .content{
+        font-size: 0.5rem;
+    }
+}
+@media (max-width: 575px){
+    .title{
+        font-size: 1rem;
+    }
+    .top{
+        top: 10px;
+    }
+    .item__text{
+        font-size: 0.5rem;
+        margin: 5px;
+    }
+    .item__title{
+        font-size: 0.5rem;
+    }
+    .bg__bd{
+        padding: 25% 0;
+    }
+    .content p{
+        margin-bottom: 5px;
+        line-height: 110%;
+    }
+    .left__fire{
+        top: -10px;
+        left: 5px;
+    }
+    .right__fire{
+        top: -10px;
+        right: 5px;
+    }
 }
